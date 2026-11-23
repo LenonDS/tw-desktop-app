@@ -7,7 +7,7 @@
   "main": "dist-electron/main.js",
   "scripts": {
     "dev:renderer": "vite",
-    "build:renderer": "vite build",
+    "build:renderer": "tsc --noEmit && vite build",
     "build:electron": "tsc -p tsconfig.electron.json",
     "build": "npm run build:electron && npm run build:renderer",
     "start": "npm run build && electron .",
